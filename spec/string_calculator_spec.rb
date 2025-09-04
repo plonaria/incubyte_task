@@ -21,5 +21,9 @@ RSpec.describe StringCalculator do
 		it 'allows new lines between number' do
 			expect(StringCalculator.add("1\n2,4")).to eq(7)
 		end
+
+		it 'supports a custom delimiter with header line' do
+		  expect(StringCalculator.add("//;\n1;2")).to eq(3)
+		end
   end
 end
